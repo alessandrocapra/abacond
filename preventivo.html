@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contatti | Abacond S.a.s</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/stile.css">
+</head>
+<body>
+    <div class="container principale">
+        <header class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div id="logo">
+                    <a href="index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+                <div id="punchline">Amministrazione condominiale innovativa e affidabile.</div>
+            </div>
+            <nav class="col-xs-12 col-sm-6">
+                <ul>
+                    <li><a href="#" class="hvr-shutter-out-vertical">Accesso riservato</a></li>
+                    <li><a href="#" class="hvr-shutter-out-vertical">Preventivi</a></li>
+                    <li><a href="contatti.html" class="hvr-shutter-out-vertical">Contatti</a></li>
+                    <!--<li><a href="#" class="hvr-shutter-out-vertical">Home </a></li>-->
+                </ul>
+            </nav>
+        </header>
+
+        <main class="row">
+            <div class="col-xs-12 col-sm-6">
+                <h2>Condomini</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi blanditiis expedita inventore natus quibusdam quis tempore totam? Animi, at consequatur explicabo iste itaque necessitatibus non odio quis sunt vero?</p>
+                <a href="#condomini" id="condomini" class="pulsante preventivi">Richiedi un preventivo</a>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h2>Fornitori</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam aut eum inventore odio quae recusandae similique voluptates. Iste maxime nemo ut? Architecto illo incidunt laborum magni quisquam quod veritatis.</p>
+                <a href="#fornitori" id="fornitori" class="pulsante preventivi">Invia dati</a>
+            </div>
+
+            <form style="display: none;" role="form" id="contactForm" data-toggle="validator" class="col-xs-12 col-sm-6 col-sm-offset-3 shake">
+                <h2>Richiesta preventivo condominiale</h2>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="name" class="h4">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="email" class="h4">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="h4 ">Message</label>
+                    <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+                <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
+                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                <div class="clearfix"></div>
+            </form>
+
+        </main>
+
+        <footer class="row">
+            <div class="col-xs-12 col-sm-4">
+                <h2>Titolo sezione</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum esse, fugiat molestiae praesentium repellendus sequi vitae voluptas voluptates! Alias autem corporis doloremque enim laudantium quisquam veritatis. Autem, optio quia. Hic.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <h2>Titolo sezione</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum esse, fugiat molestiae praesentium repellendus sequi vitae voluptas voluptates! Alias autem corporis doloremque enim laudantium quisquam veritatis. Autem, optio quia. Hic.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <h2>Titolo sezione</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum esse, fugiat molestiae praesentium repellendus sequi vitae voluptas voluptates! Alias autem corporis doloremque enim laudantium quisquam veritatis. Autem, optio quia. Hic.</p>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/validator.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+        <script>
+            $('#condomini').click(function(){
+                $('#contactForm').show(500);
+            });
+        </script>
+    </div>
+</body>
+</html>
