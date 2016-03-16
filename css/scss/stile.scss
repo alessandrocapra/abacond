@@ -4,12 +4,15 @@
 $arancioneAbacond: #F2842D;
 $gialloAbacond: #FFF011;
 
+$images: "../img";
+
+
 
 /* GENERAL STUFF */
 body {
   font-family: 'Titillium Web', Verdana, sans-serif;
   font-weight: 400;
-  background-image: url(../../img/bedge_grunge.png);
+  background-image: url(#{$images}/bedge_grunge.png);
 }
 
 p, span {
@@ -26,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
 }
 
-a.pulsante {
+a.pulsante, button.pulsante {
   display: block;
   background-color: $arancioneAbacond;
   font-size: 1.7em;
@@ -146,7 +149,7 @@ header {
 /* -------- MAIN -------- */
 main {
   .immagine {
-    background-image: url(../../img/3832742169_a6cae03a41_z.jpg);
+    background-image: url(#{$images}/3832742169_a6cae03a41_z.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -158,6 +161,20 @@ main {
     transform: scale(1.02);
 
   }
+
+  #condominiForm {
+    display: none;
+  }
+
+  #fornitoriForm {
+    @extend #condominiForm;
+  }
+
+  .obbligatorio::after {
+    content: ' *';
+    font-weight:700;
+    color: red;
+  }
 }
 
 .servizio {
@@ -168,7 +185,7 @@ main {
 footer {
   padding: 2.5em 2em;
   margin-top: 2em;
-  background-image: url(../../img/stardust.png);
+  background-image: url(#{$images}/stardust.png);
   color: white;
 
   h2 {

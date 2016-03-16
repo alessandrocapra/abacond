@@ -4,7 +4,7 @@
 body {
   font-family: 'Titillium Web', Verdana, sans-serif;
   font-weight: 400;
-  background-image: url(../../img/bedge_grunge.png); }
+  background-image: url(../img/bedge_grunge.png); }
 
 p, span {
   font-size: 1.2em;
@@ -14,7 +14,7 @@ p, span {
   background: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); }
 
-a.pulsante {
+a.pulsante, button.pulsante {
   display: block;
   background-color: #F2842D;
   font-size: 1.7em;
@@ -25,9 +25,9 @@ a.pulsante {
   padding: 1em 1em;
   margin: 2em 0;
   border-radius: 5px; }
-  a.pulsante:hover {
+  a.pulsante:hover, button.pulsante:hover {
     text-decoration: none; }
-  a.pulsante.preventivi {
+  a.pulsante.preventivi, button.pulsante.preventivi {
     width: 60%;
     margin: 2em auto; }
 
@@ -106,7 +106,7 @@ header {
 
 /* -------- MAIN -------- */
 main .immagine {
-  background-image: url(../../img/3832742169_a6cae03a41_z.jpg);
+  background-image: url(../img/3832742169_a6cae03a41_z.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -114,6 +114,12 @@ main .immagine {
   transition: all .2s ease-in-out; }
 main .immagine:hover {
   transform: scale(1.02); }
+main #condominiForm, main #fornitoriForm {
+  display: none; }
+main .obbligatorio::after {
+  content: ' *';
+  font-weight: 700;
+  color: red; }
 
 .servizio {
   margin-bottom: 2.5em;
@@ -123,7 +129,7 @@ main .immagine:hover {
 footer {
   padding: 2.5em 2em;
   margin-top: 2em;
-  background-image: url(../../img/stardust.png);
+  background-image: url(../img/stardust.png);
   color: white; }
   footer h2 {
     color: #FFF011; }
