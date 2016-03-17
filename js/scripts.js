@@ -26,12 +26,10 @@ function submitForm(){
     var scaleCondominio = $("#scaleCondominio").val();
     var riscaldamento = $("input[name=riscaldamento]:checked").val();
 
-
-
     $.ajax({
         type: "POST",
         url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&message=" + message,
+        data: "name=" + name + "&cognome=" + cognome + "&email=" + email + "&telefono=" + telefono + "&nomeCondominio=" + nomeCondominio + "&indirizzoCondominio=" + indirizzoCondominio + "&comuneCondominio=" + comuneCondominio + "&provinciaCondominio=" + provinciaCondominio + "&unitaCondominio=" + unitaCondominio + "&ascensoriCondominio=" + ascensoriCondominio + "&scaleCondominio=" + scaleCondominio + "&riscaldamento=" + riscaldamento,
         success : function(text){
             if (text == "success"){
                 formSuccess();
