@@ -50,7 +50,7 @@ header {
     padding: 0;
     background-color: #404642; }
     header ul li {
-      float: right; }
+      float: left; }
       header ul li a {
         display: block;
         padding: 1em 1em;
@@ -133,5 +133,12 @@ footer {
   color: white; }
   footer h2 {
     color: #FFF011; }
+
+/* MEDIA QUERIES */
+@media (max-width: 360px) {
+  header {
+    padding: 1em 0; }
+    header ul li {
+      width: 100%; } }
 
 /*# sourceMappingURL=stile.css.map */

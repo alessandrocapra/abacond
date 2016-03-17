@@ -14,8 +14,19 @@ $("#condominiForm").validator().on("submit", function (event) {
 function submitForm(){
     // Initiate Variables With Form Content
     var name = $("#name").val();
+    var cognome = $("#cognome").val();
     var email = $("#email").val();
-    var message = $("#message").val();
+    var telefono = $("#telefono").val();
+    var nomeCondominio = $("#nomeCondominio").val();
+    var indirizzoCondominio = $("#indirizzoCondominio").val();
+    var comuneCondominio = $("#comuneCondominio").val();
+    var provinciaCondominio = $("#provinciaCondominio").val();
+    var unitaCondominio = $("#unitaCondominio").val();
+    var ascensoriCondominio = $("#ascensoriCondominio").val();
+    var scaleCondominio = $("#scaleCondominio").val();
+    var riscaldamento = $("input[name=riscaldamento]:checked").val();
+
+
 
     $.ajax({
         type: "POST",
