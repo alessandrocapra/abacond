@@ -66,6 +66,9 @@ a.pulsante, button.pulsante {
   40% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
+form label.h4 {
+  color: #F2842D; }
+
 /* -------- HEADER -------- */
 #logo img {
   padding: 1em 0;
