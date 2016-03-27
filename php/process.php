@@ -1,5 +1,6 @@
 <?php
 $errorMSG = "";
+
 // NAME
 if (empty($_POST["name"])) {
     $errorMSG = "Name is required ";
@@ -25,114 +26,136 @@ if (empty($_POST["email"])) {
 if (empty($_POST["telefono"])) {
     $errorMSG .= "Telefono is required ";
 } else {
-    $telefono = $_POST["message"];
+    $telefono = $_POST["telefono"];
 }
 
 // NOME CONDOMINIO
 if (empty($_POST["nomeCondominio"])) {
-    $errorMSG .= "Message is required ";
+    $errorMSG .= "Nome condominio is required ";
 } else {
     $nomeCondominio = $_POST["nomeCondominio"];
 }
 
 // INDIRIZZO CONDOMINIO
 if (empty($_POST["indirizzoCondominio"])) {
-    $errorMSG .= "Message is required ";
+    $errorMSG .= "Indirizzo condominio is required ";
 } else {
     $indirizzoCondominio = $_POST["indirizzoCondominio"];
 }
 
 // COMUNE CONDOMINIO
 if (empty($_POST["comuneCondominio"])) {
-    $errorMSG .= "Message is required ";
+    $errorMSG .= "Comune condominio is required ";
 } else {
     $comuneCondominio = $_POST["comuneCondominio"];
 }
 
 // PROVINCIA CONDOMINIO
 if (empty($_POST["provinciaCondominio"])) {
-    $errorMSG .= "Message is required ";
+    $errorMSG .= "Provincia condominio is required ";
 } else {
     $provinciaCondominio = $_POST["provinciaCondominio"];
 }
 
 // UNITA CONDOMINIO
 if (empty($_POST["unitaCondominio"])) {
-    $errorMSG .= "Message is required ";
+    $errorMSG .= "Numero unità is required ";
 } else {
     $unitaCondominio = $_POST["unitaCondominio"];
 }
 
 // ASCENSORI CONDOMINIO
 if (empty($_POST["ascensoriCondominio"])) {
-    $errorMSG .= "Message is required ";
+    $ascensoriCondominio = "Valore non specificato";
 } else {
     $ascensoriCondominio = $_POST["ascensoriCondominio"];
 }
 
 // SCALE CONDOMINIO
 if (empty($_POST["scaleCondominio"])) {
-    $errorMSG .= "Message is required ";
+    $scaleCondominio = "Valore non specificato";
 } else {
     $scaleCondominio = $_POST["scaleCondominio"];
 }
 
 // RISCALDAMENTO CONDOMINIO
-if (empty($_POST["riscaldamento"])) {
-    $errorMSG .= "Message is required ";
-} else {
-    $riscaldamento = $_POST["riscaldamento"];
-}
+//if (strcmp($_POST["riscaldamento"],"undefined")!==0) {
+//    $riscaldamento = "Valore non specificato";
+//} else {
 
-$EmailTo = "alessandrocpr@gmail.com";
-$Subject = "Nuova richiesta di preventivo - condominio";
+    $riscaldamento = $_POST["riscaldamento"];
+
+//}
+
+$EmailTo = "condomini@abacond.com";
+$Subject = "Nuovo contatto da sito Abacond";
 
 // prepare email body text
-$Body = "REFERENTE";
+$Body = '<html><body>';
+$Body .= "<h1>Nuova richiesta di preventivo da sito Abacond</h1>";
 $Body .= "\n";
-$Body .= "Name: ";
+$Body .= "<h2>Referente</h2>";
+$Body .= "<p>Name: ";
 $Body .= $name;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "Cognome: ";
+$Body .= "<p>Cognome: ";
 $Body .= $cognome;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "Email: ";
+$Body .= "<p>Email: ";
 $Body .= $email;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "Telefono: ";
+$Body .= "<p>Telefono: ";
 $Body .= $telefono;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "\n";
-$Body = "CONDOMINIO";
-$Body .= "\n";
-$Body .= "\n";
-$Body .= "Nome: ";
+$Body .= "<h2>Condominio</h2>";
+$Body .= "<p>Nome: ";
 $Body .= $nomeCondominio;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "Indirizzo: ";
+$Body .= "<p>Indirizzo: ";
 $Body .= $indirizzoCondominio;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "Comune: ";
+$Body .= "<p>Comune: ";
 $Body .= $comuneCondominio;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "Provincia: ";
+$Body .= "<p>Provincia: ";
 $Body .= $provinciaCondominio;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "Numero unità: ";
+$Body .= "<p>Numero unità: ";
 $Body .= $unitaCondominio;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "Numero ascensori: ";
+$Body .= "<p>Numero ascensori: ";
 $Body .= $ascensoriCondominio;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "Numero scale: ";
+$Body .= "<p>Numero scale: ";
 $Body .= $scaleCondominio;
+$Body .= "</p>";
 $Body .= "\n";
-$Body .= "Riscaldamento centralizzato: ";
+$Body .= "<p>Riscaldamento centralizzato: ";
 $Body .= $riscaldamento;
+$Body .= "</p>";
 $Body .= "\n";
+$Body .= "</body></html>";
+
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+$headers .= "From: $email \r\n";
+$headers .= "Reply-To: condomini@abacond.com \r\n";
+$headers .= "Return-Path: condomini@abacond.com\r\n";
+$headers .= "X-Mailer: PHP \r\n";
 
 // send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+$success = mail($EmailTo, $Subject, $Body, $headers);
+
 // redirect to success page
 if ($success && $errorMSG == ""){
     echo "success";

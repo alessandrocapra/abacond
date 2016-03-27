@@ -109,15 +109,16 @@
                             <!--<label for="riscaldamentoCondominio" class="h4">Riscaldamento centralizzato</label>-->
                             <!--<input type="text" class="form-control" id="riscaldamentoCondominio" placeholder="Inserisci numero ascensori" data-error="Inserire numero ascensori">-->
                             <h4>Riscaldamento centralizzato</h4>
-                            <label class="radio-inline"><input type="radio" name="riscaldamento">Sì</label>
-                            <label class="radio-inline"><input type="radio" name="riscaldamento">No</label>
+                            <label class="radio-inline"><input type="radio" value="Sì" name="riscaldamento">Sì</label>
+                            <label class="radio-inline"><input type="radio" value="No" name="riscaldamento">No</label>
                             <!--<div class="help-block with-errors"></div>-->
                         </div>
                     </div>
 
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <button type="submit" id="form-submit-cond" class="pulsante">Invia richiesta di preventivo!</button>
-                    </div>
+                    <!--<button type="submit" id="form-submit" class="pulsante">Invia richiesta di preventivo!</button>-->
+                    <!--<div class="col-sm-10 col-sm-offset-1">-->
+                    <!--</div>-->
+                    <input type="submit" id="form-submit" class="btn btn-success btn-lg pull-right" value="Invia">Invia</input>
                     <div id="msgSubmitCondomini" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div>
                 </form>
@@ -203,7 +204,7 @@
                     </div>
 
                     <div class="col-sm-10 col-sm-offset-1">
-                        <button type="submit" id="form-submit-forn" class="pulsante">Invia richiesta di preventivo!</button>
+                        <input type="submit" id="form-submit-forn" class="pulsante">Invia richiesta di preventivo!</input>
                     </div>
                     <div id="msgSubmitFornitori" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div>

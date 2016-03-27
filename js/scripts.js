@@ -1,4 +1,4 @@
-$("#condominiForm").validator().on("submit", function (event) {
+$("#condominiForm").on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         formError();
@@ -28,7 +28,7 @@ function submitForm(){
 
     $.ajax({
         type: "POST",
-        url: "php/form-process.php",
+        url: "php/process.php",
         data: "name=" + name + "&cognome=" + cognome + "&email=" + email + "&telefono=" + telefono + "&nomeCondominio=" + nomeCondominio + "&indirizzoCondominio=" + indirizzoCondominio + "&comuneCondominio=" + comuneCondominio + "&provinciaCondominio=" + provinciaCondominio + "&unitaCondominio=" + unitaCondominio + "&ascensoriCondominio=" + ascensoriCondominio + "&scaleCondominio=" + scaleCondominio + "&riscaldamento=" + riscaldamento,
         success : function(text){
             if (text == "success"){
