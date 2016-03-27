@@ -1,4 +1,42 @@
+$('.spinner').hide();
+
+// FORM CONTATTI
+$("#contactForm").validator().on("submit", function (event) {
+    if (event.isDefaultPrevented()) {
+        // handle the invalid form...
+        formError();
+        submitMSG(false, "Did you fill in the form properly?");
+    } else {
+        // everything looks good!
+        event.preventDefault();
+        submitFormContatti();
+    }
+});
+
+function submitFormContatti(){
+    // Initiate Variables With Form Content
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var message = $("#message").val();
+
+    $.ajax({
+        type: "POST",
+        url: "php/contatti.php",
+        data: "name=" + name + "&email=" + email + "&message=" + message,
+        success : function(text){
+            if (text == "success"){
+                formSuccess();
+            } else {
+                formError();
+                submitMSG(false,text);
+            }
+        }
+    });
+}
+
+// CODICE PER FORM PREVENTIVI
 $("#condominiForm").on("submit", function (event) {
+    $('.spinner').show();
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         formError();
@@ -6,12 +44,12 @@ $("#condominiForm").on("submit", function (event) {
     } else {
         // everything looks good!
         event.preventDefault();
-        submitForm();
+        submitFormPreventivi();
     }
 });
 
 
-function submitForm(){
+function submitFormPreventivi(){
     // Initiate Variables With Form Content
     var name = $("#name").val();
     var cognome = $("#cognome").val();
@@ -42,12 +80,15 @@ function submitForm(){
 }
 
 function formSuccess(){
-    $("#condominiForm")[0].reset();
+    $("#condominiForm,#contactForm")[0].reset();
+    $('.spinner').hide();
+
     submitMSG(true, "Messaggio inviato!")
 }
 
 function formError(){
-    $("#condominiForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $('.spinner').hide();
+    $("#condominiForm,#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $(this).removeClass();
     });
 }
@@ -58,5 +99,5 @@ function submitMSG(valid, msg){
     } else {
         var msgClasses = "h3 text-center text-danger";
     }
-    $("#msgSubmitCondomini").removeClass().addClass(msgClasses).text(msg);
+    $("#msgSubmitCondomini,#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }
