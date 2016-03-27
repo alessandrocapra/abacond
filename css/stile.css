@@ -191,6 +191,21 @@ footer {
   header {
     padding: 1em 0; }
     header ul li {
-      width: 100%; } }
+      float: left; }
+    header #logo {
+      text-align: center; }
+      header #logo img {
+        width: 100%; }
+    header #punchline {
+      text-align: center; }
+
+  main .immagine.archivio {
+    width: 100%; }
+  main .servizio {
+    margin: 0; }
+    main .servizio article {
+      margin-bottom: 2em;
+      padding: 2em 0;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.2); } }
 
 /*# sourceMappingURL=stile.css.map */

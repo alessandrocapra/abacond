@@ -277,9 +277,44 @@ footer {
 @media (max-width: $breakpoint-phone) {
   header {
     padding: 1em 0;
+
     ul {
+
       li {
+        //width: 100%;
+        float: left;
+      }
+    }
+
+    #logo {
+      text-align: center;
+
+      img {
         width: 100%;
+      }
+    }
+
+    #punchline {
+      text-align: center;
+    }
+  }
+
+  main {
+
+    .immagine {
+
+      &.archivio {
+        width: 100%;
+      }
+    }
+
+    .servizio {
+      margin:0;
+
+      article {
+        margin-bottom: 2em;
+        padding: 2em 0;
+        border-bottom: 1px dashed rgba(0,0,0,0.2);
       }
     }
   }
