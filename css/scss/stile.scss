@@ -201,15 +201,20 @@ header {
 /* -------- MAIN -------- */
 main {
 
-  .col-sm-6 .immagine {
-    background-size: cover;
-    background-position: top center;
+  .col-sm-6 {
+    .immagine {
+      -webkit-background-size:cover;
+      background-size:cover;
+      background-position: top center;
+      height:365px;
+    }
   }
 
   .immagine {
     //width: 100%;
     height: 250px;
     transition: all .2s ease-in-out;
+    -webkit-background-size:cover;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -219,7 +224,7 @@ main {
 
     &.numeroVerde {
       background-image: url(#{$images}/numeroVerde.jpg);
-      //background-position: top right;
+      background-position: top right;
     }
 
     &.assemblee {
@@ -228,13 +233,14 @@ main {
 
     &.manutenzioni {
       background-image: url(#{$images}/manutenzioni.jpg);
-      background-size: contain;
+      //-webkit-background-size:contain;
+      //background-size: contain;
     }
 
     &.archivio {
       background-image: url(#{$images}/archivio.jpg);
-      background-size: 68% auto;
-      background-position: top center;
+      //background-size: 68% auto;
+      //background-position: top center;
     }
 
     &.veracard {
@@ -270,7 +276,7 @@ footer {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: $breakpoint-phone) {
+@media (max-device-width: $breakpoint-phone) {
   header {
     padding: 1em 0;
 
@@ -302,6 +308,13 @@ footer {
       &.archivio {
         width: 100%;
       }
+
+      &.veracard {
+        -webkit-background-size:100%;
+        background-size:100%;
+        height: 350px;
+        background-color: #eeeeee;
+      }
     }
 
     .servizio {
@@ -315,3 +328,45 @@ footer {
     }
   }
 }
+
+@media (min-device-width: $breakpoint-tablet){
+  main {
+
+    .col-sm-6 {
+      .immagine {
+        height: 330px;
+        -webkit-background-size:cover;
+        background-size: cover;
+
+        &.veracard {
+          -webkit-background-size:100%;
+          background-size: 100%;
+          background-position: center;
+        }
+      }
+    }
+
+    .immagine {
+      height: 350px;
+      -webkit-background-size:cover;
+      background-size: cover;
+    }
+
+  }
+}
+
+//@media (min-device-width: $breakpoint-tablet) and (orientation: portrait) {
+//  header {
+//    ul {
+//      background-color: #fff;
+//      li{
+//        float: none;
+//        display: block;
+//
+//        a{
+//          padding: 0.6em;
+//        }
+//      }
+//    }
+//  }
+//}

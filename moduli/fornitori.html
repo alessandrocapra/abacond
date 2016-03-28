@@ -30,7 +30,7 @@
         <main class="row">
             <div class="col-sm-8 col-sm-offset-2">
                 <h1>Richiesta collaborazione per fornitori</h1>
-                <form action="php/fornitori.php" role="form" id="fornitoriForm" data-toggle="validator" class="col-xs-12 shake">
+                <form action="../php/fornitori.php" role="form" id="fornitoriForm" data-toggle="validator" class="col-xs-12 shake">
                     <div class="row">
                         <div class="form-group col-sm-6">
                             <label for="nomeSocieta" class="h4 obbligatorio">Nome Società</label>
@@ -88,20 +88,26 @@
                         <div class="form-group col-sm-4">
                             <label class="h4 obbligatorio">Zona intervento</label>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="">Trento</label>
+                                <label><input type="checkbox" value="Trento">Trento</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="">Alta Valsugana</label>
+                                <label><input type="checkbox" value="Alta Valsugana">Alta Valsugana</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="">Bassa Valsugana</label>
+                                <label><input type="checkbox" value="Bassa Valsugana">Bassa Valsugana</label>
                             </div>
                         </div>
                         <div class="form-group col-sm-8">
-                            <label for="message" class="h4 obbligatorio">Attività svolte</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Spazio per dettagli aggiuntivi" required></textarea>
+                            <label for="attivita" class="h4 obbligatorio">Attività svolte</label>
+                            <textarea id="attivita" class="form-control" rows="5" placeholder="Spazio per dettagli aggiuntivi" required></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
+                    </div>
+
+                    <div class="spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
                     </div>
 
                     <input type="submit" id="form-submit-forn" class="btn btn-success btn-lg pull-right" value="Invia">
@@ -128,6 +134,7 @@
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="js/validator.min.js"></script>
-<script src="js/scripts.js"></script>
+<script src="../js/validator.min.js"></script>
+<script src="../js/scripts.js"></script>
+
 </html>
