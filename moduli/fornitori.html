@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contatti | Abacond S.a.s</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/stile.css">
+</head>
+<body>
+    <div class="container principale">
+        <header class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div id="logo">
+                    <a href="index.html"><img src="../img/logo.png" alt=""></a>
+                </div>
+                <div id="punchline">Amministrazione condominiale innovativa e affidabile.</div>
+            </div>
+            <nav class="col-xs-12 col-sm-6">
+                <ul>
+                    <li><a href="../contatti.html" class="active hvr-shutter-out-vertical">Contatti</a></li>
+                    <li><a href="../preventivo.html" class="hvr-shutter-out-vertical">Preventivi</a></li>
+                    <li><a href="#" class="hvr-shutter-out-vertical">Accesso riservato</a></li>
+                    <!--<li><a href="#" class="hvr-shutter-out-vertical">Home </a></li>-->
+                </ul>
+            </nav>
+        </header>
+
+        <main class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1>Richiesta collaborazione per fornitori</h1>
+                <form action="php/fornitori.php" role="form" id="fornitoriForm" data-toggle="validator" class="col-xs-12 shake">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="nomeSocieta" class="h4 obbligatorio">Nome Società</label>
+                            <input type="text" class="form-control" id="nomeSocieta" placeholder="Inserisci nome società" required data-error="Inserire nome spcietà">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="referente" class="h4">Referente</label>
+                            <input type="text" class="form-control" id="referente" placeholder="Inserisci nome e cognome referente" data-error="Inserire nome e cognome referente">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="indirizzoSocieta" class="h4">Indirizzo</label>
+                            <input type="text" class="form-control" id="indirizzoSocieta" placeholder="Inserisci indirizzo" data-error="Inserire indirizzo">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="cap" class="h4">CAP</label>
+                            <input type="text" class="form-control" id="cap" placeholder="Inserisci CAP" data-error="Inserire CAP">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="comuneSocieta" class="h4">Comune</label>
+                            <input type="text" class="form-control" id="comuneSocieta" placeholder="Inserisci comune" data-error="Inserire comune">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="provinciaSocieta" class="h4">Provincia</label>
+                            <input type="text" class="form-control" id="provinciaSocieta" placeholder="Inserisci provincia" data-error="Inserire provincia">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label for="emailSocieta" class="h4 obbligatorio">Email</label>
+                            <input type="email" class="form-control" id="emailSocieta" placeholder="Inserisci email" required data-error="Inserire email">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="telefonoSocieta" class="h4 obbligatorio">Telefono/Cellulare</label>
+                            <input type="text" class="form-control" id="telefonoSocieta" placeholder="Inserisci recapito telefonico" required data-error="Inserire recapito telefonico">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="faxSocieta" class="h4">Fax</label>
+                            <input type="text" class="form-control" id="faxSocieta" placeholder="Inserisci fax" data-error="Inserire fax">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label class="h4 obbligatorio">Zona intervento</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Trento</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Alta Valsugana</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Bassa Valsugana</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-8">
+                            <label for="message" class="h4 obbligatorio">Attività svolte</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="Spazio per dettagli aggiuntivi" required></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <input type="submit" id="form-submit-forn" class="btn btn-success btn-lg pull-right" value="Invia">
+                    <div id="msgSubmitFornitori" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="row">
+            <div class="col-xs-12 col-sm-4">
+                <h2>Titolo sezione</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum esse, fugiat molestiae praesentium repellendus sequi vitae voluptas voluptates! Alias autem corporis doloremque enim laudantium quisquam veritatis. Autem, optio quia. Hic.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <h2>Titolo sezione</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum esse, fugiat molestiae praesentium repellendus sequi vitae voluptas voluptates! Alias autem corporis doloremque enim laudantium quisquam veritatis. Autem, optio quia. Hic.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <h2>Titolo sezione</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum esse, fugiat molestiae praesentium repellendus sequi vitae voluptas voluptates! Alias autem corporis doloremque enim laudantium quisquam veritatis. Autem, optio quia. Hic.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="js/validator.min.js"></script>
+<script src="js/scripts.js"></script>
+</html>

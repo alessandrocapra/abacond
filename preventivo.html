@@ -29,7 +29,7 @@
         </header>
 
         <main class="row">
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                 <h2>Condomini</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi blanditiis expedita inventore natus quibusdam quis tempore totam? Animi, at consequatur explicabo iste itaque necessitatibus non odio quis sunt vero?</p>
 
@@ -125,94 +125,9 @@
                 </form>
                 <a href="#condomini" id="condomini" class="pulsante preventivi">Richiedi un preventivo</a>
             </div>
-            <div class="col-xs-12 col-sm-6">
-                <h2>Fornitori</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam aut eum inventore odio quae recusandae similique voluptates. Iste maxime nemo ut? Architecto illo incidunt laborum magni quisquam quod veritatis.</p>
-
-                <!----------------------------- FORM FORNITORI ---------------------------------------->
-                <form action="php/process.php" role="form" id="fornitoriForm" data-toggle="validator" class="col-xs-12 shake">
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="nomeSocieta" class="h4 obbligatorio">Nome Società</label>
-                            <input type="text" class="form-control" id="nomeSocieta" placeholder="Inserisci nome società" required data-error="Inserire nome spcietà">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label for="referente" class="h4">Referente</label>
-                            <input type="text" class="form-control" id="referente" placeholder="Inserisci nome e cognome referente" data-error="Inserire nome e cognome referente">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="indirizzoSocieta" class="h4">Indirizzo</label>
-                            <input type="text" class="form-control" id="indirizzoSocieta" placeholder="Inserisci indirizzo" data-error="Inserire indirizzo">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label for="cap" class="h4">CAP</label>
-                            <input type="text" class="form-control" id="cap" placeholder="Inserisci CAP" data-error="Inserire CAP">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="comuneSocieta" class="h4">Comune</label>
-                            <input type="text" class="form-control" id="comuneSocieta" placeholder="Inserisci comune" data-error="Inserire comune">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label for="provinciaSocieta" class="h4">Provincia</label>
-                            <input type="text" class="form-control" id="provinciaSocieta" placeholder="Inserisci provincia" data-error="Inserire provincia">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-sm-4">
-                            <label for="emailSocieta" class="h4 obbligatorio">Email</label>
-                            <input type="email" class="form-control" id="emailSocieta" placeholder="Inserisci email" required data-error="Inserire email">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group col-sm-4">
-                            <label for="telefonoSocieta" class="h4 obbligatorio">Telefono/Cellulare</label>
-                            <input type="text" class="form-control" id="telefonoSocieta" placeholder="Inserisci recapito telefonico" required data-error="Inserire recapito telefonico">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group col-sm-4">
-                            <label for="faxSocieta" class="h4">Fax</label>
-                            <input type="text" class="form-control" id="faxSocieta" placeholder="Inserisci fax" data-error="Inserire fax">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-sm-4">
-                            <h4 class="obbligatorio">Zona intervento</h4>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Trento</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Alta Valsugana</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Bassa Valsugana</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-8">
-                            <label for="message" class="h4 obbligatorio">Attività svolte</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Spazio per dettagli aggiuntivi" required></textarea>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <input type="submit" id="form-submit-forn" class="pulsante">Invia richiesta di preventivo!</input>
-                    </div>
-                    <div id="msgSubmitFornitori" class="h3 text-center hidden"></div>
-                    <div class="clearfix"></div>
-                </form>
-
-                <a href="#fornitori" id="fornitori" class="pulsante preventivi">Invia dati</a>
-            </div>
+            <!--<div class="col-xs-12 col-sm-6">-->
+                <!--<img src="img/ipad.jpg" alt="">-->
+            <!--</div>-->
         </main>
 
         <footer class="row">
@@ -229,22 +144,21 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum esse, fugiat molestiae praesentium repellendus sequi vitae voluptas voluptates! Alias autem corporis doloremque enim laudantium quisquam veritatis. Autem, optio quia. Hic.</p>
             </div>
         </footer>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script type="text/javascript" src="js/validator.min.js"></script>
-        <script src="js/scripts.js"></script>
-
-        <script>
-            $('#condomini').click(function(){
-                $('#fornitoriForm,#condomini').hide();
-                $('#condominiForm,#fornitori').show(500);
-            });
-
-            $('#fornitori').click(function(){
-                $('#fornitoriForm,#condomini').show(500);
-                $('#condominiForm,#fornitori').hide();
-            });
-        </script>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/validator.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<script>
+    $('#condomini').click(function(){
+        $('#fornitoriForm,#condomini').hide();
+        $('#condominiForm,#fornitori').show(500);
+    });
+
+    $('#fornitori').click(function(){
+        $('#fornitoriForm,#condomini').show(500);
+        $('#condominiForm,#fornitori').hide();
+    });
+</script>
 </html>

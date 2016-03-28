@@ -166,7 +166,7 @@ main .immagine {
     background-position: top center; }
   main .immagine.veracard {
     background-image: url(../img/veracard.png); }
-main #condominiForm, main #fornitoriForm {
+main #condominiForm {
   display: none; }
 main .obbligatorio::after {
   content: ' *';
