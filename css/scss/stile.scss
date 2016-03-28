@@ -55,6 +55,28 @@ a.pulsante, button.pulsante {
   }
 }
 
+a {
+  color: $arancioneAbacond+60;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  &:hover {
+    text-decoration: none;
+    color: $arancioneAbacond;
+    border-bottom: 2px solid $arancioneAbacond;
+
+    //&:after {
+    //  content: '';
+    //  position: absolute;
+    //  left: 0;
+    //  right: 0;
+    //  bottom: -3px;
+    //}
+  }
+}
+
 .spinner {
   margin: 100px auto 0;
   width: 70px;
@@ -348,7 +370,7 @@ footer {
     }
 
     .immagine {
-      height: 350px;
+      height: 330px;
       -webkit-background-size:cover;
       background-size: cover;
     }
