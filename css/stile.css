@@ -6,6 +6,9 @@ body {
   font-weight: 400;
   background-image: url(../img/bedge_grunge.png); }
 
+h2 {
+  font-size: 29px; }
+
 p, span {
   font-size: 1.2em;
   text-align: justify; }
@@ -30,17 +33,17 @@ a.pulsante, button.pulsante {
   border-radius: 5px; }
   a.pulsante:hover, button.pulsante:hover {
     text-decoration: none; }
-  a.pulsante.preventivi, button.pulsante.preventivi {
-    width: 60%;
-    margin: 2em auto; }
+a.preventivi, button.preventivi {
+  width: 60%;
+  margin: 2em auto; }
 
-a {
+a.link {
   color: #ffc069;
   font-weight: 700;
   position: relative;
   display: inline-block;
   vertical-align: top; }
-  a:hover {
+  a.link:hover {
     text-decoration: none;
     color: #F2842D;
     border-bottom: 2px solid #F2842D; }
@@ -177,15 +180,30 @@ main .immagine {
   main .immagine.manutenzioni {
     background-image: url(../img/manutenzioni.jpg); }
   main .immagine.archivio {
-    background-image: url(../img/archivio.jpg); }
+    background-image: url(../img/archivio.jpg), url(../img/light_grey.png);
+    border: 1px solid rgba(0, 0, 0, 0.1); }
   main .immagine.veracard {
     background-image: url(../img/veracard.png); }
-main #condominiForm {
-  display: none; }
+  main .immagine.contatto {
+    height: 40vh;
+    background-image: url(../img/contatto.jpg);
+    background-position: center center; }
+  main .immagine.collaboratori {
+    height: 40vh;
+    background-image: url(../img/collaboratori.jpg);
+    background-position: center center; }
+  main .immagine.fornitori {
+    height: 40vh;
+    background-image: url(../img/fornitori.jpg);
+    background-position: right center; }
 main .obbligatorio::after {
   content: ' *';
   font-weight: 700;
   color: red; }
+main #recapiti {
+  padding-left: 5vw; }
+main #contattaci .link {
+  font-size: 1.5vw; }
 
 .servizio {
   margin-bottom: 2.5em;
@@ -199,6 +217,9 @@ footer {
   color: white; }
   footer h2 {
     color: #FFF011; }
+  footer.row {
+    margin-left: -35px;
+    margin-right: -35px; }
 
 /* MEDIA QUERIES */
 @media (max-device-width: 360px) {
@@ -221,6 +242,8 @@ footer {
     background-position: center center;
     height: 350px;
     background-color: #eeeeee; }
+  main #contattaci .link {
+    font-size: 5vw; }
   main .servizio {
     margin: 0; }
     main .servizio article {

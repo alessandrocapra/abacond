@@ -1,3 +1,4 @@
+// Hide the spinner
 $('.spinner').hide();
 
 // FORM CONTATTI

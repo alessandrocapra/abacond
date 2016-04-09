@@ -18,6 +18,10 @@ body {
   background-image: url(#{$images}/bedge_grunge.png);
 }
 
+h2 {
+  font-size:29px;
+}
+
 p, span {
   font-size: 1.2em;
   text-align: justify;
@@ -33,20 +37,22 @@ p, span {
   padding-right: 35px;
 }
 
-a.pulsante, button.pulsante {
-  display: block;
-  background-color: $arancioneAbacond;
-  font-size: 1.7em;
-  font-weight: 700;
-  color:#fff;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 1em 1em;
-  margin: 2em 0;
-  border-radius: 5px;
+a, button {
+  &.pulsante {
+    display: block;
+    background-color: $arancioneAbacond;
+    font-size: 1.7em;
+    font-weight: 700;
+    color:#fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em 1em;
+    margin: 2em 0;
+    border-radius: 5px;
 
-  &:hover {
-    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &.preventivi {
@@ -55,7 +61,7 @@ a.pulsante, button.pulsante {
   }
 }
 
-a {
+a.link {
   color: $arancioneAbacond+60;
   font-weight: 700;
   position: relative;
@@ -66,14 +72,6 @@ a {
     text-decoration: none;
     color: $arancioneAbacond;
     border-bottom: 2px solid $arancioneAbacond;
-
-    //&:after {
-    //  content: '';
-    //  position: absolute;
-    //  left: 0;
-    //  right: 0;
-    //  bottom: -3px;
-    //}
   }
 }
 
@@ -260,31 +258,63 @@ main {
     }
 
     &.archivio {
-      background-image: url(#{$images}/archivio.jpg);
+      background-image: url(#{$images}/archivio.jpg), url(#{$images}/light_grey.png);
+      border:1px solid rgba(0,0,0,0.1);
+      //background-repeat: ;
       //background-size: 68% auto;
-      //background-position: top center;
+      //background-position: center;
     }
 
     &.veracard {
       background-image: url(#{$images}/veracard.png);
     }
+
+    &.contatto {
+      height:40vh;
+      background-image: url(#{$images}/contatto.jpg);
+      background-position: center center;
+    }
+
+    &.collaboratori {
+      height:40vh;
+      background-image: url(#{$images}/collaboratori.jpg);
+      background-position: center center;
+    }
+
+    &.fornitori {
+      height:40vh;
+      background-image: url(#{$images}/fornitori.jpg);
+      background-position: right center;
+    }
   }
 
-  #condominiForm {
-    display: none;
-  }
+  //#condominiForm {
+  //  display: none;
+  //}
 
   .obbligatorio::after {
     content: ' *';
     font-weight:700;
     color: red;
   }
+
+  #recapiti {
+    padding-left: 5vw;
+  }
+
+  #contattaci {
+    .link {
+      font-size:1.5vw;
+    }
+  }
+
 }
 
 .servizio {
   margin-bottom: 2.5em;
   margin-top: 2.5em;
 }
+
 /* -------- FOOTER -------- */
 footer {
   padding: 2.5em 2em;
@@ -294,6 +324,11 @@ footer {
 
   h2 {
     color: $gialloAbacond;
+  }
+
+  &.row {
+    margin-left: -35px;
+    margin-right: -35px;
   }
 }
 
@@ -337,6 +372,12 @@ footer {
         background-position: center center;
         height: 350px;
         background-color: #eeeeee;
+      }
+    }
+
+    #contattaci {
+      .link {
+        font-size:5vw;
       }
     }
 
