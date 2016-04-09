@@ -18,6 +18,12 @@ body {
   background-image: url(#{$images}/bedge_grunge.png);
 }
 
+h1,h2 {
+  display: inline-block;
+  border-bottom: 3px solid $arancioneAbacond;
+  padding-bottom: 5px;
+}
+
 h2 {
   font-size:29px;
 }
@@ -232,7 +238,7 @@ main {
 
   .immagine {
     //width: 100%;
-    height: 250px;
+    height: 365px;
     transition: all .2s ease-in-out;
     -webkit-background-size:cover;
     background-size: cover;
@@ -393,8 +399,14 @@ footer {
   }
 }
 
-@media (min-device-width: $breakpoint-tablet){
+@media (min-device-width: $breakpoint-phone) and (max-device-width: $breakpoint-tablet){
   main {
+
+    #contattaci {
+      .link {
+        font-size:2.5vw;
+      }
+    }
 
     .col-sm-6 {
       .immagine {
