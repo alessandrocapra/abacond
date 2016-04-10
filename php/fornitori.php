@@ -78,7 +78,7 @@ if (empty($_POST["attivita"])) {
     $attivita = $_POST["attivita"];
 }
 
-$EmailTo = "alessandrocpr@gmail.com";
+$EmailTo = "condomini@abacond.com";
 $Subject = "Nuovo fornitore da sito Abacond";
 
 // prepare email body text

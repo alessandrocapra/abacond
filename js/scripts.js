@@ -23,7 +23,7 @@ function submitFormContatti(){
 
     $.ajax({
         type: "POST",
-        url: "php/contatti.php",
+        url: "../php/contatti.php",
         data: "name=" + name + "&email=" + email + "&message=" + message,
         success : function(text){
             if (text == "success"){
@@ -68,7 +68,7 @@ function submitFormPreventivi(){
 
     $.ajax({
         type: "POST",
-        url: "php/process.php",
+        url: "../php/process.php",
         data: "name=" + name + "&cognome=" + cognome + "&email=" + email + "&telefono=" + telefono + "&nomeCondominio=" + nomeCondominio + "&indirizzoCondominio=" + indirizzoCondominio + "&comuneCondominio=" + comuneCondominio + "&provinciaCondominio=" + provinciaCondominio + "&unitaCondominio=" + unitaCondominio + "&ascensoriCondominio=" + ascensoriCondominio + "&scaleCondominio=" + scaleCondominio + "&riscaldamento=" + riscaldamento,
         success : function(text){
             if (text == "success"){

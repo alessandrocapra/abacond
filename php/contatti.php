@@ -30,7 +30,7 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "alessandro.cpr@gmail.com";
+$EmailTo = "condomini@abacond.com";
 $Subject = "Nuovo messaggio da form contatti Abacond";
 
 // prepare email body text
