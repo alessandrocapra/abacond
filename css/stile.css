@@ -43,7 +43,7 @@ a.preventivi, button.preventivi {
   margin: 2em auto; }
 
 a.link {
-  color: #ffc069;
+  color: #ffa24b;
   font-weight: 700;
   position: relative;
   display: inline-block;
@@ -164,6 +164,14 @@ header {
   transform: scaleY(1); }
 
 /* -------- MAIN -------- */
+main span.verde {
+  font-weight: 700;
+  color: rgba(54, 163, 41, 0.98); }
+main h2 a {
+  color: #333; }
+  main h2 a:hover {
+    text-decoration: none;
+    color: #F2842D; }
 main .col-sm-6 .immagine {
   -webkit-background-size: cover;
   background-size: cover;
@@ -188,11 +196,19 @@ main .immagine {
     background-image: url(../img/archivio.jpg), url(../img/light_grey.png);
     border: 1px solid rgba(0, 0, 0, 0.1); }
   main .immagine.veracard {
-    background-image: url(../img/veracard.png); }
+    background-image: url(../img/veracard.png);
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap; }
   main .immagine.contatto {
     height: 40vh;
     background-image: url(../img/contatto.jpg);
-    background-position: center center; }
+    background-position: center center;
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap; }
   main .immagine.collaboratori {
     height: 40vh;
     background-image: url(../img/collaboratori.jpg);
@@ -200,7 +216,11 @@ main .immagine {
   main .immagine.fornitori {
     height: 40vh;
     background-image: url(../img/fornitori.jpg);
-    background-position: right center; }
+    background-position: right center;
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap; }
 main .obbligatorio::after {
   content: ' *';
   font-weight: 700;
@@ -220,8 +240,22 @@ footer {
   margin-top: 2em;
   background-image: url(../img/stardust.png);
   color: white; }
-  footer h2 {
-    color: #FFF011; }
+  footer a {
+    color: #F2842D; }
+    footer a:hover {
+      color: #F2842D;
+      text-decoration: none;
+      border-bottom: 3px solid #F2842D;
+      padding-bottom: 3px; }
+  footer h3 {
+    color: #fff; }
+    footer h3 a {
+      color: #fff; }
+      footer h3 a:hover {
+        color: #F2842D;
+        text-decoration: none;
+        border-bottom: 3px solid #F2842D;
+        padding-bottom: 3px; }
   footer.row {
     margin-left: -35px;
     margin-right: -35px; }
