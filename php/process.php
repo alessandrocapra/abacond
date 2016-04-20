@@ -88,7 +88,7 @@ if (empty($_POST["scaleCondominio"])) {
 //}
 
 $EmailTo = "condomini@abacond.com";
-$Subject = "Nuovo contatto da sito Abacond";
+$Subject = "Nuova richiesta di preventivo - sito Abacond";
 
 // prepare email body text
 $Body = '<html><body>';

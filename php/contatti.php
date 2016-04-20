@@ -29,7 +29,6 @@ if (empty($_POST["message"])) {
     $message = $_POST["message"];
 }
 
-
 $EmailTo = "condomini@abacond.com";
 $Subject = "Nuovo messaggio da form contatti Abacond";
 
