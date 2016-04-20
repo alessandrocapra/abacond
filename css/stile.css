@@ -271,8 +271,18 @@ footer {
 @media (max-device-width: 360px) {
   header {
     padding: 1em 0; }
+    header nav {
+      margin: 0 auto; }
     header ul li {
+      width: 100%;
       float: left; }
+      header ul li:first-child {
+        border-top: 1px solid #F2842D; }
+      header ul li a {
+        width: 100%;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+        border-bottom: 1px solid #F2842D; }
     header #logo {
       text-align: center; }
       header #logo img {
@@ -288,14 +298,19 @@ footer {
     background-position: center center;
     height: 350px;
     background-color: #eeeeee; }
-  main #contattaci .link {
-    font-size: 5vw; }
+  main #contattaci a.link {
+    font-size: 1.3em; }
   main .servizio {
     margin: 0; }
     main .servizio article {
       margin-bottom: 2em;
       padding: 2em 0;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.2); } }
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.2); }
+
+  footer.text-center {
+    text-align: left; }
+  footer h3 {
+    margin-top: 2em; } }
 @media (min-device-width: 360px) and (max-device-width: 768px) {
   main #contattaci .link {
     font-size: 2.5vw; }

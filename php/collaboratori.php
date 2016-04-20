@@ -40,7 +40,7 @@ if (empty($_POST["titolo"])) {
 if (empty($_POST["competenze"])) {
     $errorMSG .= "Le competenze sono obbligatorie";
 } else {
-    $message = $_POST["competenze"];
+    $competenze = $_POST["competenze"];
 }
 
 $EmailTo = "condomini@abacond.com";
@@ -48,29 +48,26 @@ $Subject = "Nuovo messaggio da form collaboratori Abacond";
 
 // prepare email body text
 $Body = '<html><body>';
-$Body .= "<h2>Nome e cognome</h2>: ";
+$Body .= "<h2>Nome e cognome:</h2>";
+$Body .= "<p>";
 $Body .= $name;
-$Body .= "\n";
-$Body .= "<h2>Residenza</h2>: ";
+$Body .= "</p>";
+$Body .= "<h2>Residenza:</h2>";
 $Body .= "<p>";
 $Body .= $residenza;
 $Body .= "</p>";
-$Body .= "\n";
-$Body .= "<h2>Email</h2>: ";
+$Body .= "<h2>Email:</h2>";
 $Body .= "<p>";
 $Body .= $email;
 $Body .= "</p>";
-$Body .= "\n";
-$Body .= "<h2>Titolo di studio</h2>: ";
+$Body .= "<h2>Titolo di studio:</h2>";
 $Body .= "<p>";
 $Body .= $titolo;
 $Body .= "</p>";
-$Body .= "\n";
-$Body .= "<h2>Competenze</h2>: ";
+$Body .= "<h2>Competenze:</h2>";
 $Body .= "<p>";
-$Body .= $message;
+$Body .= $competenze;
 $Body .= "</p>";
-$Body .= "\n";
 $Body .= "</body></html>";
 
 $headers = "MIME-Version: 1.0\r\n";

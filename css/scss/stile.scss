@@ -407,11 +407,27 @@ footer {
   header {
     padding: 1em 0;
 
+    nav {
+      margin:0 auto;
+    }
+
     ul {
 
       li {
-        //width: 100%;
+        width: 100%;
         float: left;
+
+        &:first-child {
+          border-top:1px solid $arancioneAbacond;
+        }
+        a {
+          width: 100%;
+          padding-bottom:0.5em;
+          padding-top:0.5em;
+          //text-align: center;
+          border-bottom:1px solid $arancioneAbacond;
+
+        }
       }
     }
 
@@ -446,8 +462,8 @@ footer {
     }
 
     #contattaci {
-      .link {
-        font-size:5vw;
+      a.link {
+        font-size:1.3em;
       }
     }
 
@@ -459,6 +475,17 @@ footer {
         padding: 2em 0;
         border-bottom: 1px dashed rgba(0,0,0,0.2);
       }
+    }
+  }
+
+  footer {
+
+    &.text-center {
+      text-align: left;
+    }
+
+    h3 {
+      margin-top:2em;
     }
   }
 }
