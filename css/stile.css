@@ -89,6 +89,9 @@ a.link {
     transform: scale(1); } }
 form label.h4 {
   color: #F2842D; }
+form select {
+  padding: 0.3em;
+  width: 100%; }
 
 /* -------- HEADER -------- */
 #logo img {
@@ -212,7 +215,11 @@ main .immagine {
   main .immagine.collaboratori {
     height: 40vh;
     background-image: url(../img/collaboratori.jpg);
-    background-position: center center; }
+    background-position: center center;
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap; }
   main .immagine.fornitori {
     height: 40vh;
     background-image: url(../img/fornitori.jpg);

@@ -124,8 +124,45 @@ function submitFormFornitori(){
     });
 }
 
+// FORM COLLABORATORI
+$("#collaboratoriForm").validator().on("submit", function (event) {
+    $('.spinner').show();
+    if (event.isDefaultPrevented()) {
+        // handle the invalid form...
+        formError();
+        submitMSG(false, "Hai completato correttamente il form?");
+    } else {
+        // everything looks good!
+        event.preventDefault();
+        submitFormCollaboratori();
+    }
+});
+
+function submitFormCollaboratori(){
+    // Initiate Variables With Form Content
+    var name = $("#name").val();
+    var residenza = $("#residenza").val();
+    var email = $("#email").val();
+    var titolo = $("#titolo").val();
+    var competenze = $("#competenze").val();
+
+    $.ajax({
+        type: "POST",
+        url: "../php/collaboratori.php",
+        data: "name=" + name + "&residenza=" + residenza + "&email=" + email + "&titolo=" + titolo + "&competenze=" + competenze,
+        success : function(text){
+            if (text == "success"){
+                formSuccess();
+            } else {
+                formError();
+                submitMSG(false,text);
+            }
+        }
+    });
+}
+
 function formSuccess(){
-    $("#condominiForm,#contactForm,#fornitoriForm")[0].reset();
+    $("#condominiForm,#contactForm,#fornitoriForm,#collaboratoriForm")[0].reset();
     $('.spinner').hide();
 
     submitMSG(true, "Messaggio inviato!")
@@ -133,7 +170,7 @@ function formSuccess(){
 
 function formError(){
     $('.spinner').hide();
-    $("#condominiForm,#contactForm,#fornitoriForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $("#condominiForm,#contactForm,#fornitoriForm,#collaboratoriForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $(this).removeClass();
     });
 }
@@ -144,5 +181,5 @@ function submitMSG(valid, msg){
     } else {
         var msgClasses = "h3 text-center text-danger";
     }
-    $("#msgSubmitCondomini,#msgSubmit,#msgSubmitFornitori").removeClass().addClass(msgClasses).text(msg);
+    $("#msgSubmitCondomini,#msgSubmit,#msgSubmitFornitori,#msgSubmitCollaboratori").removeClass().addClass(msgClasses).text(msg);
 }
