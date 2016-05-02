@@ -11,6 +11,9 @@ h1, h2 {
   border-bottom: 3px solid #F2842D;
   padding-bottom: 5px; }
 
+h1 {
+  font-weight: 600; }
+
 h2 {
   font-size: 29px; }
 
