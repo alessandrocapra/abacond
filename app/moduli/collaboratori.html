@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Compila il form collaboratori per contattarci via email - www.abacond.com">
+    <title>Contatto generico | Abacond S.a.s  - amministrazione condominiale a Trento e Valsugana.</title>
+
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- endbuild -->
+
+    <!--<script src='https://www.google.com/recaptcha/api.js?hl=it' async defer></script>-->
+</head>
+<body>
+    <div class="container principale">
+        <header class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div id="logo">
+                    <a href="../index.html"><img src="../images/logo.png" alt="Logo Abacond"></a>
+                </div>
+                <div id="punchline">Amministrazione condominiale innovativa e affidabile.</div>
+            </div>
+            <nav class="col-xs-12 col-sm-6">
+                <ul>
+                    <li><a href="../contatti.html" class="active hvr-shutter-out-vertical">Contatti</a></li>
+                    <li><a href="preventivo.html" class="hvr-shutter-out-vertical">Preventivi</a></li>
+                    <!-- <li><a href="../offerte-immobiliari.html" class="hvr-shutter-out-vertical">Offerte immobiliari</a></li> -->
+                    <li><a href="http://abacond.cedhousesuite.com" target="_blank" class="hvr-shutter-out-vertical">Accesso riservato</a></li>
+                    <!--<li><a href="#" class="hvr-shutter-out-vertical">Home </a></li>-->
+                </ul>
+            </nav>
+        </header>
+
+        <main class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1>Contatto per collaboratori</h1>
+                <p>Vuoi segnalare il tuo nome per eventuali future collaborazioni? Compila il form, all'occorrenza potrai essere contattato/a.</p>
+                <form role="form" action="../php/collaboratori.php" id="collaboratoriForm" data-toggle="validator" class="shake" method="post">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="name" class="h4 obbligatorio">Nome e Cognome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Inserisci nome e cognome" required data-error="Inserisci nome e cognome.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="residenza" class="h4 obbligatorio">Indirizzo di residenza</label>
+                            <input type="text" class="form-control" id="residenza" placeholder="Inserisci indirizzo di residenza" required data-error="Inserisci indirizzo di residenza.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="email" class="h4 obbligatorio">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Inserisci email" required data-error="Inserisci email.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="titolo" class="h4 obbligatorio">Titolo di studio</label>
+                            <!--<input type="text" class="form-control" id="titolo" required data-error="Scegli un titolo di studio.">-->
+                            <select name="titolo" id="titolo" class="form-control" required data-error="Scegli un titolo di studio.">
+                                <option value="" disabled selected>Seleziona opzione</option>
+                                <option value="Scuola media inferiore">Scuola media inferiore</option>
+                                <option value="Scuola professionale">Scuola professionale</option>
+                                <option value="Scuola media superiore">Scuola media superiore</option>
+                                <option value="Laurea">Laurea</option>
+                                <option value="Laurea magistrale">Laurea magistrale</option>
+                            </select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <label for="competenze" class="h4 obbligatorio">Competenze/esperienze</label>
+                            <textarea id="competenze" class="form-control" rows="5" placeholder="Descrivere brevemente competenze ed esperienze acquisite, ad esempio: contabilità aziendale, progettazione civile, segreteria..." required data-error="Inserisci il tuo messaggio."></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
+                    <!--<div class="g-recaptcha" data-sitekey="6LcvnR0TAAAAAID0oVrvQ1L41HXz-4BptOXK-Oos"></div>-->
+                    <input type="submit" id="form-submit" class="btn btn-success btn-lg pull-right " value="Invia">
+                    <div id="msgSubmitCollaboratori" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="row text-center">
+            <div class="col-xs-12 col-sm-3">
+                <h3><a href="../contatti.html">Contattaci</a></h3>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h3>Abacond S.a.s. di geom. Sergio Capra e C.</h3>
+                <span>P. IVA: 01758760225</span><br>
+                <span>Progettato e creato da <a href="http://www.alessandrocapraux.com">Alessandro Capra</a></span>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <h3>Privacy policy</h3>
+                <a href="//www.iubenda.com/privacy-policy/7829420" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="../scripts/validator.min.js"></script>
+<script src="../scripts/main.js"></script>
+
+</html>
