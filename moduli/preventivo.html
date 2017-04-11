@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Richiedici un preventivo gratuito, risponderemo in breve tempo alla tua richiesta! - www.abacond.com">
+    <title>Preventivo | Abacond S.a.s  - amministrazione condominiale a Trento e Valsugana.</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/stile.css">
+</head>
+<body>
+    <div class="container principale">
+        <header class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div id="logo">
+                    <a href="../index.html"><img src="../img/logo.png" alt="Logo Abacond"></a>
+                </div>
+                <div id="punchline">Amministrazione condominiale innovativa e affidabile.</div>
+            </div>
+            <nav class="col-xs-12 col-sm-6">
+                <ul>
+                    <li><a href="../contatti.html" class="hvr-shutter-out-vertical">Contatti</a></li>
+                    <li><a href="../moduli/preventivo.html" class="hvr-shutter-out-vertical">Preventivi</a></li>
+                    <li><a href="../offerte-immobiliari.html" class="hvr-shutter-out-vertical">Offerte immobiliari</a></li>
+                    <li><a href="http://abacond.cedhousesuite.com/" target="_blank" class="hvr-shutter-out-vertical">Accesso riservato</a></li>
+                    <!--<li><a href="#" class="hvr-shutter-out-vertical">Home </a></li>-->
+                </ul>
+            </nav>
+        </header>
+
+        <main class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <h2>Richiesta preventivi per condomini</h2>
+                <p>Vi chiediamo di compilare con precisione i campi sottostanti, in modo da poter proporre un adeguato preventivo per la gestione del condominio da voi richiesta.</p>
+
+                <!----------------------------- FORM CONDOMINI ---------------------------------------->
+                <form action="../php/process.php" role="form" id="condominiForm" data-toggle="validator" class="col-xs-12 shake">
+                    <div class="row">
+                        <h3 class="col-xs-12">Referente</h3>
+                        <div class="form-group col-sm-6">
+                            <label for="name" class="h4 obbligatorio">Nome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Inserisci nome" required data-error="Inserire nome">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="cognome" class="h4 obbligatorio">Cognome</label>
+                            <input type="text" class="form-control" id="cognome" placeholder="Inserisci cognome" required data-error="Inserire cognome">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="email" class="h4 obbligatorio">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Inserisci email" required data-error="Inserire email">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="telefono" class="h4 obbligatorio">Telefono/Cellulare</label>
+                            <input type="text" class="form-control" id="telefono" placeholder="Inserisci recapito telefonico" required data-error="Inserire recapito telefonico">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>Condominio</h3>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="nomeCondominio" class="h4 obbligatorio">Nome</label>
+                            <input type="text" class="form-control" id="nomeCondominio" placeholder="Inserisci nome condominio" required data-error="Inserire nome condominio">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="indirizzoCondominio" class="h4 obbligatorio">Indirizzo</label>
+                            <input type="text" class="form-control" id="indirizzoCondominio" placeholder="Inserisci indirizzo" required data-error="Inserire indirizzo condominio">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="comuneCondominio" class="h4 obbligatorio">Comune</label>
+                            <input type="text" class="form-control" id="comuneCondominio" placeholder="Inserisci comune" required data-error="Inserire comune condominio">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="provinciaCondominio" class="h4 obbligatorio">Provincia</label>
+                            <input type="text" class="form-control" id="provinciaCondominio" placeholder="Inserisci provincia" required data-error="Inserire provincia condominio">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="unitaCondominio" class="h4 obbligatorio">Numero unità</label>
+                            <input type="text" class="form-control" id="unitaCondominio" placeholder="Inserisci numero unità" required data-error="Inserire numero unità">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="ascensoriCondominio" class="h4">Numero ascensori</label>
+                            <input type="text" class="form-control" id="ascensoriCondominio" placeholder="Inserisci numero ascensori" data-error="Inserire numero ascensori">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="scaleCondominio" class="h4">Numero scale</label>
+                            <input type="text" class="form-control" id="scaleCondominio" placeholder="Inserisci numero scale" data-error="Inserire numero scale">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <h4 style="color: #F2842D;">Riscaldamento centralizzato</h4>
+                            <label class="radio-inline"><input type="radio" value="Sì" name="riscaldamento">Sì</label>
+                            <label class="radio-inline"><input type="radio" value="No" name="riscaldamento">No</label>
+                            <!--<div class="help-block with-errors"></div>-->
+                        </div>
+                    </div>
+                    <div class="spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
+                    <input type="submit" id="form-submit" class="btn btn-success btn-lg pull-right" value="Invia">
+                    <div id="msgSubmitCondomini" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                </form>
+                <!--<a href="#condomini" id="condomini" class="pulsante preventivi">Richiedi un preventivo</a>-->
+            </div>
+        </main>
+
+        <footer class="row text-center">
+            <div class="col-xs-12 col-sm-3">
+                <h3><a href="contatti.html">Contattaci</a></h3>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h3>Abacond S.a.s. di geom. Sergio Capra e C.</h3>
+                <span>P. IVA: 01758760225</span><br>
+                <span>Progettato e creato da <a href="http://www.alessandrocapraux.com">Alessandro Capra</a></span>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <h3>Privacy policy</h3>
+                <a href="//www.iubenda.com/privacy-policy/7829420" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript" src="../js/validator.min.js"></script>
+<script src="../js/scripts.js"></script>
+
+<!--<script>-->
+    <!--$('#condomini').click(function(){-->
+        <!--$('#fornitoriForm,#condomini').hide();-->
+        <!--$('#condominiForm,#fornitori').show(500);-->
+    <!--});-->
+
+    <!--$('#fornitori').click(function(){-->
+        <!--$('#fornitoriForm,#condomini').show(500);-->
+        <!--$('#condominiForm,#fornitori').hide();-->
+    <!--});-->
+<!--</script>-->
+</html>

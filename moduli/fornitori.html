@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Compila il form per proporre la tua azienda ad Abacond - www.abacond.com">
+    <title>Contatto per fornitori | Abacond S.a.s  - amministrazione condominiale a Trento e Valsugana.</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/stile.css">
+</head>
+<body>
+    <div class="container principale">
+        <header class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div id="logo">
+                    <a href="index.html"><img src="../img/logo.png" alt="Logo Abacond"></a>
+                </div>
+                <div id="punchline">Amministrazione condominiale innovativa e affidabile.</div>
+            </div>
+            <nav class="col-xs-12 col-sm-6">
+                <ul>
+                    <li><a href="../contatti.html" class="active hvr-shutter-out-vertical">Contatti</a></li>
+                    <li><a href="preventivo.html" class="hvr-shutter-out-vertical">Preventivi</a></li>
+                    <li><a href="../offerte-immobiliari.html" class="hvr-shutter-out-vertical">Offerte immobiliari</a></li>
+                    <li><a href="http://abacond.cedhousesuite.com" target="_blank" class="hvr-shutter-out-vertical">Accesso riservato</a></li>
+                    <!--<li><a href="#" class="hvr-shutter-out-vertical">Home </a></li>-->
+                </ul>
+            </nav>
+        </header>
+
+        <main class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1>Segnalazione attività dai fornitori</h1>
+                <form action="../php/fornitori.php" role="form" id="fornitoriForm" data-toggle="validator" class="col-xs-12 shake">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="nomeSocieta" class="h4 obbligatorio">Nome Società</label>
+                            <input type="text" class="form-control" id="nomeSocieta" placeholder="Inserisci nome società" required data-error="Inserire nome spcietà">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="referente" class="h4">Referente</label>
+                            <input type="text" class="form-control" id="referente" placeholder="Inserisci nome e cognome referente" data-error="Inserire nome e cognome referente">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="indirizzoSocieta" class="h4">Indirizzo</label>
+                            <input type="text" class="form-control" id="indirizzoSocieta" placeholder="Inserisci indirizzo" data-error="Inserire indirizzo">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="cap" class="h4">CAP</label>
+                            <input type="text" class="form-control" id="cap" placeholder="Inserisci CAP" data-error="Inserire CAP">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="comuneSocieta" class="h4">Comune</label>
+                            <input type="text" class="form-control" id="comuneSocieta" placeholder="Inserisci comune" data-error="Inserire comune">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="provinciaSocieta" class="h4">Provincia</label>
+                            <input type="text" class="form-control" id="provinciaSocieta" placeholder="Inserisci provincia" data-error="Inserire provincia">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label for="emailSocieta" class="h4 obbligatorio">Email</label>
+                            <input type="email" class="form-control" id="emailSocieta" placeholder="Inserisci email" required data-error="Inserire email">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="telefonoSocieta" class="h4 obbligatorio">Telefono/Cellulare</label>
+                            <input type="text" class="form-control" id="telefonoSocieta" placeholder="Inserisci recapito telefonico" required data-error="Inserire recapito telefonico">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="faxSocieta" class="h4">Fax</label>
+                            <input type="text" class="form-control" id="faxSocieta" placeholder="Inserisci fax" data-error="Inserire fax">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label class="h4 obbligatorio">Zona intervento</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="Trento">Trento</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="Alta Valsugana">Alta Valsugana</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="Bassa Valsugana">Bassa Valsugana</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-8">
+                            <label for="attivita" class="h4 obbligatorio">Attività svolte</label>
+                            <textarea id="attivita" class="form-control" rows="5" placeholder="Spazio per dettagli aggiuntivi" required></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
+
+                    <input type="submit" id="form-submit-forn" class="btn btn-success btn-lg pull-right" value="Invia">
+                    <div id="msgSubmitFornitori" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="row text-center">
+            <div class="col-xs-12 col-sm-3">
+                <h3><a href="contatti.html">Contattaci</a></h3>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h3>Abacond S.a.s. di geom. Sergio Capra e C.</h3>
+                <span>P. IVA: 01758760225</span><br>
+                <span>Progettato e creato da <a href="http://www.alessandrocapraux.com">Alessandro Capra</a></span>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <h3>Privacy policy</h3>
+                <a href="//www.iubenda.com/privacy-policy/7829420" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="../js/validator.min.js"></script>
+<script src="../js/scripts.js"></script>
+
+</html>

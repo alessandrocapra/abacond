@@ -4,7 +4,7 @@
 $arancioneAbacond: #F2842D;
 $gialloAbacond: #FFF011;
 
-$images: "../images";
+$images: "../img";
 
 $breakpoint-phone: 360px;
 $breakpoint-tablet: 768px;
@@ -455,4 +455,90 @@ footer {
 
       &.archivio {
         width: 100%;
-  
+      }
+
+      &.veracard {
+        -webkit-background-size:100%;
+        background-size:100%;
+        background-position: center center;
+        height: 350px;
+        background-color: #eeeeee;
+      }
+    }
+
+    #contattaci {
+      a.link {
+        font-size:1.3em;
+      }
+    }
+
+    .servizio {
+      margin:0;
+
+      article {
+        margin-bottom: 2em;
+        padding: 2em 0;
+        border-bottom: 1px dashed rgba(0,0,0,0.2);
+      }
+    }
+  }
+
+  footer {
+
+    &.text-center {
+      text-align: left;
+    }
+
+    h3 {
+      margin-top:2em;
+    }
+  }
+}
+
+@media (min-device-width: $breakpoint-phone) and (max-device-width: $breakpoint-tablet){
+  main {
+
+    #contattaci {
+      .link {
+        font-size:2.5vw;
+      }
+    }
+
+    .col-sm-6 {
+      .immagine {
+        height: 330px;
+        -webkit-background-size:cover;
+        background-size: cover;
+
+        &.veracard {
+          -webkit-background-size:100%;
+          background-size: 100%;
+          background-position: center;
+        }
+      }
+    }
+
+    .immagine {
+      height: 330px;
+      -webkit-background-size:cover;
+      background-size: cover;
+    }
+
+  }
+}
+
+//@media (min-device-width: $breakpoint-tablet) and (orientation: portrait) {
+//  header {
+//    ul {
+//      background-color: #fff;
+//      li{
+//        float: none;
+//        display: block;
+//
+//        a{
+//          padding: 0.6em;
+//        }
+//      }
+//    }
+//  }
+//}
